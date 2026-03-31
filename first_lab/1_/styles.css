@@ -1,0 +1,187 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  overflow: auto;
+}
+
+/* Add h1,p,all types margin 0 reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Header and navigation */
+.site-header {
+  background: #ffffff;
+  padding: 10px 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-nav a {
+  margin-right: 12px;
+  text-decoration: none;
+  color: #0a66c2;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+/* :active for nav items */
+.main-nav a:active {
+  background: #0a66c2;
+  color: #fff;
+}
+
+/* :visited links */
+a:visited {
+  color: #6a097d;
+}
+
+.content {
+  max-width: 900px;
+  padding: 20px;
+  margin: 0 auto;
+}
+section {
+  margin-bottom: 24px;
+  padding: 12px;
+  background: #fff;
+  border-radius: 6px;
+}
+
+/* Button hover */
+.cta {
+  background: #007acc;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.cta:hover {
+  background: #005fa3;
+}
+
+/* Sidebar / form */
+.sidebar {
+  position: fixed;
+  right: 16px;
+  top: 200px;
+  width: 300px;
+}
+.contact-form {
+  /* background: #fff; */
+  background: #232323;
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid gray;
+}
+
+.contact-form:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  background: #3c3c3c;
+  /* border: 3px solid gray; */
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #161616;
+  color: white;
+  font-size: 1rem;
+}
+
+/* :focus for inputs */
+.contact-form input:focus {
+  outline: none;
+  border-color: #007acc;
+
+  /* box-shadow: 0 0 0 3px rgba(0, 122, 204, 0.12); */
+}
+
+.contact-form button {
+  background: #007acc;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  max-height: 32px;
+}
+
+/* Toggle extra content using :checked / :not(:checked) */
+.extra-toggle input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 8px;
+}
+.extra-toggle input[type="checkbox"]:not(:checked) + label + .extra {
+  display: none;
+}
+.extra-toggle input[type="checkbox"]:checked + label + .extra {
+  display: block;
+  margin-top: 8px;
+  padding: 8px;
+  background: #f7f7ff;
+  border-radius: 4px;
+}
+
+/* :target to highlight active section */
+section:target {
+  border: 2px solid #007acc;
+  box-shadow: 0 6px 20px rgba(0, 122, 204, 0.06);
+}
+
+/* nth-of-type every third item in list */
+.features-list li:nth-of-type(3n) {
+  background: #fff3cd;
+}
+
+/* small footer */
+.site-footer {
+  text-align: center;
+  padding: 12px;
+  margin-top: 40px;
+}
+
+/* basic responsive */
+@media (max-width: 800px) {
+  .sidebar {
+    position: static;
+    margin: auto;
+    width: 100%;
+    max-width: 300px;
+  }
+}

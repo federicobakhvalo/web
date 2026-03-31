@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Index.html</title>
+	<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+	<header class="site-header">
+		<h1>Мини-страница задания</h1>
+		<nav class="main-nav">
+			<a href="#home">Home</a>
+			<a href="#about">About</a>
+			<a href="#services">Services</a>
+			<a href="#contact">Contact</a>
+		</nav>
+	</header>
+
+	<main class="content">
+		<section id="home">
+			<h2>Главная</h2>
+			<p>Короткий вводный текст на главной секции.</p>
+			<button class="cta">Нажми меня</button>
+		</section>
+
+		<section id="about">
+			<h2>О проекте</h2>
+			<p>Немного информации о задании и целях.</p>
+		</section>
+
+		<section id="services">
+			<h2>Сервисы</h2>
+			<ol class="features-list">
+				<li>Функция один</li>
+				<li>Функция два</li>
+				<li>Функция три</li>
+				<li>Функция четыре</li>
+				<li>Функция пять</li>
+				<li>Функция шесть</li>
+			</ol>
+		</section>
+
+		<section id="contact">
+			<h2>Контакты / Вкладки (:target)</h2>
+			<p>Нажмите ссылки вверху — секция с id станет активной через :target.</p>
+			<!-- Тогглер дополнительного контента через чекбокс -->
+			<div class="extra-toggle">
+				<input type="checkbox" id="show-more">
+				<label for="show-more">Показать дополнительный контент</label>
+				<div class="extra">Вот дополнительный контент, скрываемый чекбоксом.</div>
+			</div>
+		</section>
+	</main>
+
+	<aside class="sidebar">
+		<form class="contact-form">
+			<h3>Форма</h3>
+			<label>Имя
+				<input type="text" name="name" placeholder="Ваше имя">
+			</label>
+			<label>Email
+				<input type="email" name="email" placeholder="you@example.com">
+			</label>
+			<button type="submit">Отправить</button>
+		</form>
+	</aside>
+
+	<footer class="site-footer">
+		<p>Простой футер — ссылки демонстрируют :visited.</p>
+		<a href="#home">Вернуться на главную</a>
+	</footer>
+	
+</body>
+</html>
