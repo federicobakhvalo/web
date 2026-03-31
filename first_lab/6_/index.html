@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo">NewsSite</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">World</a></li>
+                    <li><a href="#">Politics</a></li>
+                    <li><a href="#">Tech</a></li>
+                </ul>
+            </nav>
+            <form class="search" role="search">
+                <input type="search" placeholder="Поиск новостей..." aria-label="Search">
+            </form>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="layout">
+            <section class="feed" aria-label="News feed">
+                <article class="news">
+                    <h2>Заголовок новости 1</h2>
+                    <p>Краткое описание новости и вступление, показывающее суть материала.</p>
+                </article>
+                <article class="news">
+                    <h2>Заголовок новости 2</h2>
+                    <p>Краткое описание второй новости с интересным фактом.</p>
+                </article>
+                <article class="news">
+                    <h2>Заголовок новости 3</h2>
+                    <p>Ещё одно краткое описание — для демонстрации потока новостей.</p>
+                </article>
+            </section>
+
+            <aside class="sidebar" aria-label="Sidebar">
+                <div class="widget popular">
+                    <h3>Популярные</h3>
+                    <ol>
+                        <li><a href="#">Популярная статья 1</a></li>
+                        <li><a href="#">Популярная статья 2</a></li>
+                        <li><a href="#">Популярная статья 3</a></li>
+                    </ol>
+                </div>
+                <div class="widget ads">
+                    <h3>Реклама</h3>
+                    <div class="ad">Баннер 300x250</div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="contacts">Контакты: info@example.com</div>
+            <div class="socials">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+            <div class="copyright">© 2026 NewsSite</div>
+        </div>
+    </footer>
+
+</body>
+</html>
