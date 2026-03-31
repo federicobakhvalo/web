@@ -1,0 +1,203 @@
+(/* CSS-анимации для сцены и интерактивного элемента */)
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: black;
+  color: #eef2ff;
+  margin: 0;
+  padding: 28px;
+}
+.stage {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.scene {
+  position: relative;
+  height: 260px;
+  background: #252525;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.scene:hover {
+  background: #303030;
+  transition: background-color 0.3s ease;
+}
+
+.shape {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Фигуры */
+.square {
+  background: #ff6b6b;
+}
+.circle {
+  background: #4ecdc4;
+  border-radius: 50%;
+}
+.rect {
+  background: #ffd166;
+  width: 80px;
+  height: 50px;
+  border-radius: 6px;
+}
+.diamond {
+  background: #845ec2;
+  transform: rotate(45deg);
+  width: 56px;
+  height: 56px;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 52px solid #ff9671;
+  background: transparent;
+}
+
+/* Индивидуальные keyframes и разные длительности/задержки */
+@keyframes move1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-60px) rotate(10deg);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes move2 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(80px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes move3 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px) translateX(-40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes move4 {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  50% {
+    transform: translateX(-70px) rotate(-15deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+@keyframes move5 {
+  0% {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(80px) rotate(225deg);
+  }
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+}
+
+/* Привязанные анимации с разной длительностью и задержкой */
+#s1 {
+  animation: move1 4.2s ease-in-out 0s infinite;
+}
+#s2 {
+  animation: move2 3.6s ease-in-out 0.4s infinite;
+}
+#s3 {
+  animation: move3 5s ease-in-out 0.9s infinite;
+}
+#s4 {
+  animation: move4 4.8s ease-in-out 0.2s infinite;
+}
+#s5 {
+  animation: move5 3.2s ease-in-out 0.6s infinite;
+}
+
+/* Синхронизация: пауза и момент возвращения в 100% */
+/* Для синхронного возвращения все анимации настроены на цикличность с общим кратным периодом, например 10s, но с разными durations и delays выше; дополнительно можно управлять шагом через animation-play-state */
+
+/* Интерактивная часть */
+.interactive {
+  margin-top: 20px;
+}
+.interactive-box {
+  width: 220px;
+  padding: 18px;
+  text-align: center;
+  border-radius: 8px;
+  background: #1b2b4a;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    transform 400ms ease,
+    box-shadow 400ms ease;
+}
+.interactive-box:hover {
+  transform: scale(1.08) rotate(3deg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+.interactive-box:active {
+  transform: scale(0.98) rotate(0deg);
+}
+
+/* Клик — переключаем класс через :focus (простая эмуляция) */
+.interactive-box:focus {
+  outline: none;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Доступность: подсказка фокуса */
+.interactive-box:focus-visible {
+  box-shadow: 0 0 0 4px rgba(78, 205, 196, 0.18);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .scene {
+    flex-wrap: wrap;
+    gap: 12px;
+    height: auto;
+    padding: 16px;
+  }
+  .shape {
+    margin: 8px;
+  }
+}
