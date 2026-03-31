@@ -1,0 +1,91 @@
+/* Базовая стилизация */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+  margin: 0;
+  padding: 24px;
+}
+.demo {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.task {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+/* 1. Кнопка с переходом цвета */
+.btn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.btn-transition {
+  background: #1e88e5;
+  color: #fff;
+  transition: background-color 0.5s ease;
+}
+.btn-transition:hover {
+  background: #0b63b8;
+}
+
+/* 2. Квадрат, изменяющий размер (1s) */
+.square {
+  width: 100px;
+  height: 100px;
+  background: #ff7043;
+  border-radius: 8px;
+  transition: transform 1s ease;
+}
+.square:hover {
+  transform: scale(1.4);
+}
+
+/* 3. Блок, который перемещается вправо на 100px при hover (500ms) */
+.movable {
+  display: inline-block;
+  padding: 12px 18px;
+  background: #8e44ad;
+  color: #fff;
+  border-radius: 6px;
+  transition: transform 500ms ease;
+}
+.movable:hover {
+  transform: translateX(100px);
+}
+
+/* 4. Контроль задержки: начало перехода через 300ms */
+.delayed {
+  display: inline-block;
+  padding: 12px 18px;
+  background: #2ecc71;
+  color: #fff;
+  border-radius: 6px;
+  transition: transform 400ms ease 300ms;
+}
+.delayed:hover {
+  transform: translateX(80px);
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+  .movable,
+  .delayed {
+    display: block;
+    margin-top: 8px;
+  }
+  .square {
+    margin-top: 8px;
+  }
+}

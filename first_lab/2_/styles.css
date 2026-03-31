@@ -30,6 +30,7 @@ body {
   color: #fff;
   font-weight: 600;
   margin-top: 8px;
+  font-size: 22px;
 }
 .side-by-side {
   display: flex;
