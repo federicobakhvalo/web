@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gradients</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main class="examples">
+		<h1 class="title gradient-text">Градиенты — демонстрация</h1>
+
+		<section class="example">
+			<h2>1. Линейный 135° (зелёный → жёлтый)</h2>
+			<div class="box g1">linear-gradient(135deg, green, yellow)</div>
+		</section>
+
+		<section class="example">
+			<h2>2. repeating-linear-gradient (фиолетовый, синий, розовый)</h2>
+			<div class="box g2">repeating-linear-gradient()</div>
+		</section>
+
+		<section class="example">
+			<h2>3. Радиальный градиент (центр в верхнем левом углу)</h2>
+			<div class="box g3">radial-gradient(at top left)</div>
+		</section>
+
+		<section class="example">
+			<h2>4. Круглый vs Эллиптический радиальный градиент</h2>
+			<div class="side-by-side">
+				<div class="box g4 circle">circle</div>
+				<div class="box g4 ellipse">ellipse</div>
+			</div>
+		</section>
+
+		<section class="example">
+			<h2>5. Сымитировать закат (радиальный)</h2>
+			<div class="box g5">sunset radial</div>
+		</section>
+
+		<section class="example">
+			<h2>6. Заполнить текст заголовка градиентом</h2>
+			<div class="box g6"><h3 class="clip">Градиентный заголовок</h3></div>
+		</section>
+	</main>
+</body>
+</html>

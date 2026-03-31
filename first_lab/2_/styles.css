@@ -1,0 +1,109 @@
+/* Базовая верстка */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f7fb;
+  color: #222;
+  padding: 24px;
+}
+.examples {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+.example {
+  margin-bottom: 22px;
+}
+.box {
+  height: 140px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 8px;
+}
+.side-by-side {
+  display: flex;
+  gap: 12px;
+}
+.side-by-side .box {
+  flex: 1;
+  height: 120px;
+}
+
+/* 1. Linear gradient 135deg green -> yellow */
+.g1 {
+  background: linear-gradient(135deg, #2ecc71, #f1c40f);
+  color: #0b2e13;
+}
+
+/* 2. repeating-linear-gradient with three colors */
+.g2 {
+  background: repeating-linear-gradient(
+    45deg,
+    #8a2be2 0 20px,
+    #1e90ff 20px 40px,
+    #ff69b4 40px 60px
+  );
+}
+
+/* 3. Radial gradient with center at top left (blue -> orange) */
+.g3 {
+  background: radial-gradient(circle at top left, #1e90ff, #ff8c00);
+}
+
+/* 4. Difference between circle and ellipse */
+.g4.circle {
+  background: radial-gradient(circle, #7f7fd5, #86a8e7);
+}
+.g4.ellipse {
+  background: radial-gradient(ellipse at center, #f093fb, #f5576c);
+}
+
+/* 5. Sunset imitation (radial) */
+.g5 {
+  background: radial-gradient(
+    circle at center,
+    #ff7e5f 0%,
+    #feb47b 30%,
+    #86a8e7 70%
+  );
+}
+
+/* 6. Fill text with gradient */
+.g6 {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b, #86a8e7);
+  color: transparent;
+}
+.g6 .clip {
+  margin: 0;
+  font-size: 22px;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b, #86a8e7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Доп. стили для читабельности на светлых градиентах */
+.g1,
+.g3 {
+  color: #10220f;
+}
+
+@media (max-width: 700px) {
+  .side-by-side {
+    flex-direction: column;
+  }
+  .box {
+    height: 100px;
+  }
+}
