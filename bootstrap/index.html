@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bootstrap portfolio</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+<body>
+
+		<header class="navbar navbar-expand-lg bg-dark main-header" data-bs-theme="dark">
+			<div class="container-fluid">
+				
+				
+				
+				
+				<a class="navbar-brand" href="#" style="margin-left: 2px;">
+					Home</a>
+				
+				
+				
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="#">Обо мне</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Портфолио</a>
+						</li>
+						<li class="nav-item ">
+							<a class="nav-link" href="#">Цены</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Контакты</a>
+						</li>
+					</ul>
+					<form class="d-flex" role="search">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="border-radius: 12px;" />
+						<button class="btn btn-outline-success" type="submit" style="border-radius: 12px;">Search</button>
+					</form>
+				</div>
+			</div>
+	</header>
+
+	<main>
+
+		<div class="bg-dark p-5 text-center text-white header-info" data-bs-theme="dark" >
+			<h1 class="display-4">Разработка сайтов любой сложности</h1>
+			<p class="lead">Здесь вы найдете информацию обо мне, моих навыках и проектах.</p>
+			<a href="#" class="btn btn-primary btn-lg" style="border-radius: 12px;">Узнать больше</a>
+		</div>
+
+
+		<div class="about card-info">
+			<div class="container">
+				<div class="row">
+
+
+					<div class="col-md-6" style="display: flex; justify-content: center; align-items: center;">
+						<img src="https://i.pinimg.com/736x/70/b8/5e/70b85e9d5b79aa04f86d57b1ad8f7cd1.jpg" alt="Обо мне">	
+						
+					</div>
+
+					<div class="col-md-6">
+						<h2>Обо мне</h2>
+						<p>Я  веб-разработчик, специализирующийся на создании современных и функциональных сайтов. Мои навыки включают HTML, CSS, JavaScript, а также работу с различными фреймворками и библиотеками. Я стремлюсь создавать уникальные и эффективные решения для своих клиентов, обеспечивая высокое качество и удовлетворение их потребностей.</p>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="portfolio">
+			<h3 class="text-center">Портфолио</h3>
+			<div id="carouselExampleCaptions" class="carousel slide" style="border-radius: 12px;">
+						<div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+								aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+								aria-label="Slide 2"></button>
+							<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+								aria-label="Slide 3"></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+			
+								<div style="width: 100%; height: 400px; background-color: #111111; border-radius: 12px;"></div>
+								
+								<div class="carousel-caption d-block">
+									<h5>Портфолио #1</h5>
+									<p>Описание проекта #1</p>
+									<button class="btn btn-primary" style="border-radius: 12px;">Подробнее</button>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div style="width: 100%; height: 400px; background-color: #111111; border-radius: 12px;"></div>
+								<div class="carousel-caption d-block">
+									<h5>Портфолио #2</h5>
+									<p>Описание проекта #2</p>
+									<button class="btn btn-primary" style="border-radius: 12px;">Подробнее</button>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div style="width: 100%; height: 400px; background-color: #111111; border-radius: 12px;"></div>
+								<div class="carousel-caption d-block">
+									<h5>Портфолио #3</h5>
+									<p>Описание проекта #3</p>
+									<button class="btn btn-primary" style="border-radius: 12px;">Подробнее</button>
+								</div>
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+
+		</div>
+
+		<div class="price-list card-info">
+
+			<h3 class="text-center">Цены</h3>
+
+			<div class="row g-4" style="width: 100%;">
+
+
+
+				<div class="col-md-4">
+					<div class="card bg-dark text-white h-100" style="border-radius: 12px;">
+						<div class="card-body">
+							<h5 class="card-title">Эконом</h5>
+							<p class="card-text">От 300 рублей</p>
+							<a href="#" class="btn btn-primary" style="border-radius: 12px;">Выбрать</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card bg-dark text-white h-100" style="border-radius: 12px;">
+						<div class="card-body">
+							<h5 class="card-title">Стандартный</h5>
+							<p class="card-text">От 1000 рублей</p>
+							<a href="#" class="btn btn-primary" style="border-radius: 12px;">Выбрать</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card bg-dark text-white h-100" style="border-radius: 12px;">
+						<div class="card-body">
+							<h5 class="card-title">Премиум</h5>
+							<p class="card-text">От 5000 рублей</p>
+							<a href="#" class="btn btn-primary" style="border-radius: 12px;">Выбрать</a>
+
+						</div>
+					</div>
+
+
+
+			</div>
+			
+
+				
+
+		</div>
+
+
+
+		</div>
+
+		<div class="card-info contacts">
+			<h4 style="flex-grow: 1; background-color: #111111; padding: 10px 5px; border-radius: 12px; border: 1px solid #333;" class="text-center">Cвязаться</h4>
+			<form style="flex-grow: 1;" data-bs-theme="dark">
+				<div class="mb-3">
+					<label for="name" class="form-label">Имя</label>
+					<input type="text" class="form-control" id="name" placeholder="Введите ваше имя" style="border-radius: 12px;">
+				</div>
+				<div class="mb-3">
+					<label for="email" class="form-label">Email</label>
+					<input type="email" class="form-control" id="email" placeholder="Введите ваш email" style="border-radius: 12px;">
+				</div>
+				<div class="mb-3">
+					<label for="message" class="form-label">Сообщение</label>
+					<textarea class="form-control" id="message" rows="4" placeholder="Введите ваше сообщение" style="border-radius: 12px;"></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary" style="border-radius: 12px; width: 100%;">Отправить</button>
+			</form>
+		</div>
+
+		
+
+		
+
+		
+
+	</main>
+	<footer class="footer mt-auto py-3 bg-dark" data-bs-theme="dark">
+		<div class="container text-center" >
+			<span class="text-muted text-center">© 2026 Мой сайт. Все права защищены.</span>
+		</div>
+	</footer>
+
+
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+		crossorigin="anonymous"></script>
+	
+</body>
+</html>
