@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Генератор таблицы</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <h1 class="title">Создать таблицу</h1>
+    <form id="gridForm" class="form" onsubmit="return false;">
+      <label class="label">Число строк
+        <input id="rows" type="text" class="input" value="4">
+      </label>
+      <label class="label">Число столбцов
+        <input id="cols" type="text" class="input" value="3">
+      </label>
+      <div class="actions">
+        <button id="createBtn" class="btn primary" type="button">Создать</button>
+        <button id="clearBtn" class="btn ghost" type="button">Очистить</button>
+      </div>
+    </form>
+
+    <div id="tableWrap" class="table-wrap" aria-live="polite"></div>
+  </main>
+  <script src="form.js"></script>
+</body>
+</html>

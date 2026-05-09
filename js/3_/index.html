@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Показать элементы</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <h1 class="title">Отобразить</h1>
+    <form id="showForm" class="form">
+      <p class="label">Отобразить:</p>
+      <label class="checkbox"><input type="checkbox" id="showDate"> Дату и время</label>
+      <label class="checkbox"><input type="checkbox" id="showList"> Список</label>
+      <label class="checkbox"><input type="checkbox" id="showPara"> Абзац текста красного цвета</label>
+      <div class="actions">
+        <button type="button" id="showBtn" class="btn primary">Показать</button>
+        <button type="button" id="clearBtn" class="btn ghost">Очистить</button>
+      </div>
+    </form>
+
+    <section id="output" class="output" aria-live="polite"></section>
+  </main>
+  <script src="form.js"></script>
+</body>
+</html>

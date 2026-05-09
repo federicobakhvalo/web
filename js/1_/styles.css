@@ -1,0 +1,161 @@
+:root {
+  --bg: #0b1020;
+  --card: #0f1724;
+  --muted: #94a3b8;
+  --text: #e6eef8;
+  --accent: #7c3aed;
+  --input-bg: #0b1220;
+  --ring: 0 0 0 4px rgba(124, 58, 237, 0.14);
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+  background:
+    radial-gradient(
+      1200px 600px at 10% 10%,
+      rgba(124, 58, 237, 0.08),
+      transparent
+    ),
+    linear-gradient(180deg, #020617 0%, var(--bg) 100%);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+}
+.card {
+  width: 100%;
+  max-width: 460px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow:
+    0 6px 30px rgba(2, 6, 23, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.title {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+.muted {
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 100%;
+  width: 100%;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: var(--muted);
+}
+.input {
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  background: var(--input-bg);
+  color: var(--text);
+  outline: none;
+  flex-grow: 1;
+}
+.input:focus {
+  box-shadow: var(--ring);
+  border-color: var(--accent);
+}
+.pwd-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  position: relative;
+}
+.ghost {
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+}
+.btn.primary {
+  background: linear-gradient(180deg, var(--accent), #5b21b6);
+  color: white;
+  border: none;
+}
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  text-decoration: none;
+}
+.actions {
+  margin-top: 18px;
+}
+
+#togglePwd {
+  position: absolute;
+  right: 8px;
+  height: 100%;
+  transform: translateY(10%);
+}
+
+#password {
+  padding-right: 60px; /* space for the toggle button */
+}
+
+.message {
+  min-height: 20px;
+  margin: 6px 0 0 0;
+  font-size: 14px;
+  text-align: center;
+}
+.message.error {
+  color: #ff6b6b;
+}
+@media (max-width: 500px) {
+  .card {
+    padding: 20px;
+    border-radius: 10px;
+  }
+}

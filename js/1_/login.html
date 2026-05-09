@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Авторизация</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <h1 class="title">Вход</h1>
+    <form id="loginForm" class="form" autocomplete="off">
+      <label class="label">Логин
+        <input id="username" name="username" type="text" class="input" required autofocus>
+      </label>
+      <label class="label">Пароль
+        <div class="pwd-row">
+          <input id="password" name="password" type="password" class="input" required>
+          <button type="button" id="togglePwd" class="ghost">Show</button>
+        </div>
+      </label>
+      <button type="submit" class="btn primary">Вход</button>
+      <p id="message" class="message" aria-live="polite"></p>
+    </form>
+  </main>
+  <script src="form.js"></script>
+</body>
+</html>

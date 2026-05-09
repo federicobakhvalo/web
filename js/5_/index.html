@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Задания — Контейнеры</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="split">
+
+    <aside class="left">
+      <h2 class="title">Выберите задание</h2>
+      <form id="taskForm" class="form">
+        <label class="radio"><input type="radio" name="task" value="1_"> Задание 1</label>
+        <label class="radio"><input type="radio" name="task" value="2_"> Задание 2</label>
+
+        <label class="radio"><input type="radio" name="task" value="3_"> Задание 3</label>
+        <div class="actions">
+          <button type="button" id="showBtn" class="btn primary">Показать</button>
+          <button type="button" id="openDefault" class="btn ghost">Открыть по умолчанию</button>
+        </div>
+        <p id="note" class="muted"></p>
+      </form>
+    </aside>
+
+    <section class="right">
+      <iframe id="contentFrame" name="contentFrame" src="" frameborder="0"></iframe>
+    </section>
+  </main>
+  <script src="form.js"></script>
+</body>
+</html>
